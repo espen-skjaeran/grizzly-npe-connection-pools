@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //testCompile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: "2.31"
+    testCompile group: 'org.glassfish.jersey.connectors', name: 'jersey-grizzly-connector', version: "2.31"
+    testRuntime group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: "2.31"
+    testRuntime group: 'javax.xml.bind', name: 'jaxb-api', version: "2.3.1"
+
+}
